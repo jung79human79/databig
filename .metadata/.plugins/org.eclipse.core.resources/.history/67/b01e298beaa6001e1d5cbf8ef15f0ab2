@@ -1,0 +1,10 @@
+package if_else문;
+
+public class Ex03입장료계산다른방법 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

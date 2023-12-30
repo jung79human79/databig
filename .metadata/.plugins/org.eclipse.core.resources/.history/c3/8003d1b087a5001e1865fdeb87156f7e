@@ -1,0 +1,13 @@
+package 변수및자료형;
+
+public class Ex01입출력 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		// 한 줄 삭제 : ctrl+d 한 줄 복사 : ctrl+alt+방향키
+		// 출력문
+     System.out.println("정대주");
+     System.out.println("정대주");
+	}
+
+}

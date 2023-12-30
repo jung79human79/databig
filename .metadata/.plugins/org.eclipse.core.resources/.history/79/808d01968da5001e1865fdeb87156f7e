@@ -1,0 +1,9 @@
+package 변수및자료형;
+
+public class Ex02변수 {
+	// main을 못 만들었다면 main적고 
+ public static void main(String[] args) {
+	
+}
+
+}

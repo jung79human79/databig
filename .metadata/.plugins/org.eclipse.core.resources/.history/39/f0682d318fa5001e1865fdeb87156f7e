@@ -1,0 +1,16 @@
+package 변수및자료형;
+
+public class Ex02변수 {
+// main을 못 만들었다면 main적고 ctrl+스페이스바로 자동완성
+ public static void main(String[] args) {
+	//변수선언
+	//자료형 변수명 = 값;
+	int num = 4;
+	//변수사용이유=재사용
+	System.out.println(num);
+	System.out.println(num);
+	 
+	 
+}
+
+}

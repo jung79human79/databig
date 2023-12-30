@@ -1,0 +1,22 @@
+package 변수및자료형;
+
+public class Ex03자료형 {
+	public static void main(String[] args) {
+		//자바 기본 자료형
+		//1.논리자료형 : boolean(1byte) 참,거짓을 나타냄
+		// 예:참이라는 데이터를 저장하는 bool 변수 선언
+		boolean bool = true;
+		bool = false;              // 자료형 노기록
+		System.out.println(bool);  //맨마지막 변수값 적용
+		
+		//2.문자 자료형 : char(2byte) : 한 글자만 기록가능 단따옴표
+		char name = '정';
+		// 참고 문자열 자료형 : 기본자료형 아니다 쌍따옴표 여러 글자
+		String name2 = "정대주";
+		System.out.println(name);
+		System.out.println(name2);
+		
+		
+		
+	}
+}

@@ -1,0 +1,10 @@
+package if_else문;
+
+public class Ex04마트계산 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}
