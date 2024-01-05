@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-01-05T05:53:28.141Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="SBCpONgzIe6pRjdyLT66" version="22.1.16" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2024-01-05T05:54:55.874Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="YzVQS7txrCC8BlUNo-dJ" version="22.1.16" type="github" pages="2">
   <diagram name="페이지-1" id="3u__s5e8Mbtb5okNppO3">
     <mxGraphModel dx="2261" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -888,7 +888,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="z_IsX7V7jjkWUoZ2pkvH-73" value="수강" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;html=1;" vertex="1" parent="1">
-          <mxGeometry x="130" y="830" width="180" height="180" as="geometry" />
+          <mxGeometry x="123" y="946" width="180" height="180" as="geometry" />
         </mxCell>
         <mxCell id="z_IsX7V7jjkWUoZ2pkvH-74" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="z_IsX7V7jjkWUoZ2pkvH-73">
           <mxGeometry y="30" width="180" height="30" as="geometry" />
@@ -1096,7 +1096,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="z_IsX7V7jjkWUoZ2pkvH-122" value="PK는2개일수 없고 2개 묶어서 복합으로 1개키" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=15;whiteSpace=wrap;html=1;labelBackgroundColor=#3399FF;fontColor=#FFFFFF;" vertex="1" parent="1">
-          <mxGeometry x="137" y="1016" width="152" height="40" as="geometry" />
+          <mxGeometry x="128" y="1160" width="152" height="40" as="geometry" />
         </mxCell>
         <mxCell id="z_IsX7V7jjkWUoZ2pkvH-123" value="논리적인 모델링" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=18;whiteSpace=wrap;html=1;labelBackgroundColor=#3399FF;fontColor=#FFFFFF;" vertex="1" parent="1">
           <mxGeometry x="-296.5" y="600" width="153" height="40" as="geometry" />
