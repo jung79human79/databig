@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-01-05T05:53:05.708Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="AGBjKxzvzgPTtb2TVBMx" version="22.1.16" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2024-01-05T05:53:28.141Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" etag="SBCpONgzIe6pRjdyLT66" version="22.1.16" type="github" pages="2">
   <diagram name="페이지-1" id="3u__s5e8Mbtb5okNppO3">
     <mxGraphModel dx="2261" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -1099,7 +1099,7 @@
           <mxGeometry x="137" y="1016" width="152" height="40" as="geometry" />
         </mxCell>
         <mxCell id="z_IsX7V7jjkWUoZ2pkvH-123" value="논리적인 모델링" style="text;strokeColor=none;fillColor=none;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=18;whiteSpace=wrap;html=1;labelBackgroundColor=#3399FF;fontColor=#FFFFFF;" vertex="1" parent="1">
-          <mxGeometry x="-293" y="590" width="153" height="40" as="geometry" />
+          <mxGeometry x="-296.5" y="600" width="153" height="40" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
