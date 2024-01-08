@@ -9,6 +9,7 @@ public class Ex04마트계산 {
 		Scanner sc = new Scanner(System.in);
 		System.out.print("상품갯수: ");
 		int gift = sc.nextInt();
+		
 		int money = 0;
 		// 선물세트 구입시 지불할 금액계산
 		if (gift>=11) {
@@ -20,5 +21,7 @@ public class Ex04마트계산 {
 		}
 		//가격출력하기
 		System.out.print("가격은 " + money + "원 입니다.");
+		
+	
 	}
 }
