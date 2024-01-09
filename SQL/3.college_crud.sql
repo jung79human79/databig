@@ -218,4 +218,114 @@ INSERT INTO Student_Course (id, student_id, course_code) VALUES
 (7, 7, 5);
 select * from Student_Course;
 
+-- 과목별 수강자 수 (과목이름 수강자수)
+-- 과목이름 오름차순 정렬+수강자수가2이상인 과목이름 출력
+-- group by,order by에 넣은 컬럼을 select에 동일한 컬럼을 넣자
+select c.course_name, count(sc.student_id) 수강자수   -- group by를 기준으로 숫자셈  -- 컬럼한글이름 따옴표 안넣어도 가능
+from Student_Course sc
+right join Course c                      -- 과목은 있는데 수강자가 없는경우도 나오려면 여기서는 right join함=여기서 왼쪽은 Student_Course테이블임
+on sc.course_code= c.course_code
+group by c.course_name                    
+having 수강자수 >=2                            -- having절은 group by 뒤에 와서 필터링  -- 컬럼한글이름 따옴표 절대 안넣음
+order by c.course_name asc;                  -- 최종적으로 정렬하므로 맨 마지막
+
+-- 빌게이츠 교수의 과목을 수강한 학생이름을 출력 + 학생수
+-- 서브쿼리 이용 
+-- 문제 내용대로 교수,과목,수강(학생id),학생 순으로 서브쿼리 사용
+
+-- 1번 select = 교수코드
+select  p.Professor_code
+from Professor p
+where p.Professor_name = '빌 게이츠';
+    
+-- 2번 select = 과목코드 -- 과목테이블에서 과목코드를 빼내기 위해 부모코드인 교수코드(1번 select)가 필요
+select c.course_code
+from course c
+where c.Professor_code = (
+    select  p.Professor_code
+    from Professor p
+    where p.Professor_name = '빌 게이츠'
+    );
+    
+-- 3번 select =학생id -- 수강테이블에서 학생id를 빼내기 위해 과목코드가 필요
+-- 수강테이블에서 학생id를 뽑은 이유는 학생테이블에서 학생이름컬럼을 뽑아야 하므로
+select sc.student_id
+from Student_Course sc
+where sc.course_code = (
+  select c.course_code
+  from course c
+  where c.Professor_code = (
+      select  p.Professor_code
+      from Professor p
+      where p.Professor_name = '빌 게이츠'
+    )
+);
+
+-- 최종 select=학생이름과 학과코드  -- 학생테이블에서 학생이름를 빼내기 위해 학생id가 필요함
+select s.Student_name, s.department_code
+from Student s
+where s.Student_id in (                  -- in(5,3,1,9)은 id가 5,3,1,9인 값만 출력 -- in 대신 = 해도됨(한개의 레코드만 나오므로 =이 가능) 만일 2개이상의 레코드라면 in을 사용
+     select sc.student_id                 -- 여기서 in은 5번
+     from Student_Course sc              -- from에 적힌 테이블을 where절과 select절에서 컬럼을 뽑아 사용 
+     where sc.course_code = (
+           select c.course_code
+           from course c
+           where c.Professor_code = (
+                    select  p.Professor_code
+                     from Professor p
+                      where p.Professor_name = '빌 게이츠'
+                   )
+             )
+);    
+
+-- 스티브 잡스 교수의 과목을 수강한 학생이름을 출력 (동일질문)
+-- 1번 select =교수코드  2번 select=과목코드  
+ -- 3번 select= 학생id  4번 select= 학생이름,학과코드
+ -- 학과이름,학생이름
+select d.department_name , Student_name    -- s.Student_name은 안됨 (미정의됨)
+from department d
+inner join 
+(select s.Student_name, s.department_code
+from Student s
+where s.Student_id in (                  -- 학생id= 6,7 안에서(in) = in(6,7);  학생id중 6,7번만 이름과 학과코드를 출력 
+  select sc.student_id
+  from Student_Course sc
+  where sc.course_code = (
+     select c.course_code
+     from course c
+     where c.Professor_code = (
+         select  p.Professor_code
+         from Professor p
+         where p.Professor_name = '스티브 잡스'
+	 )
+	)
+  )
+) as A
+ ON A.department_code = d.department_code;   -- department테이블의 기본키department_code가 공통요소
+ 
+ -- 사길동 학생(7)과 같은 과목을 수강신청한 학생이름 출력
+ -- 서브쿼리
+ -- 학생테이블->수강테이블->수강테이블->학생테이블
+ select s.Student_name        -- 학생이름 =바길동,사길동
+ from Student s
+ where s.Student_id in (
+   select sc.Student_id           -- 학생id 6번,7번
+   from Student_Course sc
+   where sc.course_code=(
+     select sc.course_code             -- 과목코드 5번
+     from Student_Course sc
+     where sc.Student_id =(
+       select s.Student_id              -- 학생 7번
+       from Student s
+       where s.Student_name = '사길동'     
+      )
+    )
+ );
+ 
+ 
+ 
+        
+    
+    
+
                                        
