@@ -21,7 +21,8 @@ public class ex로또번호 {
 			}
 		}
 		System.out.println(Arrays.toString(lotto));
-
+		System.out.print("zzz");
+		System.out.println("zzz");
 		
 
 //		lotto[2] = ran.nextInt(10) + 1;

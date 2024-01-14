@@ -20,14 +20,20 @@ public class BankBookMain {
 				bank1.withdraw(300);
 				// 4.잔액확인
 				bank1.showMoney();                         // 
-				System.out.println(bank1.showMoney());     // return money;를 출력하려면 해당함수를 호출해야함
+				System.out.println(bank1.showMoney());     // return money;를 출력하려면 해당함수를 프린트함수에서 호출해야함
 				
-				bank1.setMoney(500);
+				bank1.setMoney(500);                   // 돈초기화=돈수정=저장
 				System.out.println(bank1.showMoney());
 				System.out.println(bank1.getMoney());
 				
 				BankBook bank2 = new BankBook(500);
 				BankBook bank3 = new BankBook(300);
+				
+				System.out.println(bank2.getMoney()+bank3.getMoney());
+				int a=bank2.getMoney();
+				int b=bank3.getMoney();
+				System.out.println(a+b);
+				
 				
 				
 				
