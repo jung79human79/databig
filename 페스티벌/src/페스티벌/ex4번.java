@@ -2,7 +2,7 @@ package 페스티벌;
 
 import java.util.Scanner;
 
-public class ex04 {
+public class ex4번 {
 
 //	public static void main(String[] args) {
 //

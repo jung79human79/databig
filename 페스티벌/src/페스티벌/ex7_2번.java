@@ -7,27 +7,31 @@ public class ex7_2번 {
 
 	public static void main(String[] args) {
 
-		Scanner sc = new Scanner(System.in);
+		Scanner sc =new Scanner(System.in);
 		Random ran = new Random();
-
-		int fail = 0;
+		int num =0;
 		do {
-			int num1 = ran.nextInt(10) + 1;
-			int num2 = ran.nextInt(10) + 1;
-			System.out.print(num1 + "+" + num2 + "=");
+			int ran1 = ran.nextInt(10);
+			int ran2 = ran.nextInt(10);
+			System.out.print(ran1+"+"+ran2+"=" );
 			int input = sc.nextInt();
-			if (num1 + num2 == input) {
-				System.out.println("성공!");
-			} else {
-				// fail++;
-				System.out.println("실패...");
-				fail++;
-				if (fail == 5) {
-					System.out.println("게임 종료");
+			if(ran1+ran2==input) {
+				System.out.println("SUCCESS!!" );
+				
+			}else{
+				num++;
+				System.out.println("Fail..." );
+				if(num==5) {
+					System.out.println("게임종료" );
 					break;
 				}
 			}
-		} while (true);
+			
+			
+			
+			
+			
+		}while(true);
 	}
 
 }
