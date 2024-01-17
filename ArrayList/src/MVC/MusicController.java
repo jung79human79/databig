@@ -2,6 +2,8 @@ package MVC;
 
 import java.util.ArrayList;
 
+import javazoom.jl.player.MP3Player;
+
 public class MusicController {
 
 	// Controller : 실제 기능에 관여하는 부분 = 기능들을 가지고 있는 도구  =[1]재생 [2]정지 [3]이전곡 [4]다음곡 [5]종료
@@ -17,7 +19,7 @@ public class MusicController {
 		//2.매서드
 		// 1.생성자 생성  = 다른 클래스에서 사용하기 위해 = 객체를 생성하기 위해
 		public MusicController () {
-			String comPath = "C:\\Users\\SMHRD\\Desktop\\javabackend\\Ex0115ArrayList\\player\\"; 
+			String comPath = "C:\\Users\\wjd1e\\OneDrive\\바탕 화면\\javaStudy\\ArrayList\\player\\"; 
 			Music m1 = new Music("HypeBoy", "뉴진스", 180, comPath + "HypeBoy.mp3");  
 			MusicList.add(m1); 
 			MusicList.add(new Music("IAM", "아이브", 198, comPath + "IAM.mp3")); 

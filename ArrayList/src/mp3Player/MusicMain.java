@@ -3,6 +3,8 @@ package mp3Player;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javazoom.jl.player.MP3Player;
+
 public class MusicMain {
 
 	public static void main(String[] args) {
@@ -16,7 +18,7 @@ public class MusicMain {
 		// 2. 노래제목 가수이름 재생시간 한번에 이 자료형을 한번에 담을 수 있는 자료형은 없으므로--> 클래스를 생성
 		// 노래데이터를 생성해야하는데~~자료형이 없다 고로 새로운 자료형=클래스 생성
 
-		String comPath = "C:\\Users\\SMHRD\\Desktop\\javabackend\\Ex0115ArrayList\\player\\"; // 주소경로 길어서 따로 변수생성
+		String comPath = "C:\\Users\\wjd1e\\OneDrive\\바탕 화면\\javaStudy\\ArrayList\\player\\"; // 주소경로 길어서 따로 변수생성
 
 		// 노래 데이터를 전부 저장하는 ArrayList 생성 이름은 MusicList
 
