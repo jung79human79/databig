@@ -1,6 +1,6 @@
 package 인터페이스;
 
-import 월급계산프로그램.Emplotee;  //다른 패키지의 클래스
+import 월급계산프로그램.Emplotee;  //동일 프로젝트이지만 다른 패키지
 
 public class child extends Emplotee implements Temp, Temp2{
 

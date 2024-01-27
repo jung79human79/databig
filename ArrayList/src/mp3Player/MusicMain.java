@@ -35,6 +35,7 @@ public class MusicMain {
 		MusicList.add(new Music("한페이지가될수있게", "Day6", 185, comPath + "한페이지가될수있게.mp3")); // 4번인덱스
 
 		// 출력해보기
+		//System.out.println(MusicList.size());  //정답=5 배열의length와 같음
 		System.out.println("==========플레이어============");
 		int i = 0;              // 몇 번째 곡인지 의미 기억하고 있는 변수
 		
@@ -50,7 +51,8 @@ public class MusicMain {
 					mp3.stop();
 				}
 				// 노래를 재생하기 위해서는 필요한 데이터는? 노래의 주소값
-				// 뮤직 리스트에 있는 0번 인덱스의 노래를 재생
+				// 
+
 				
 				 
 				mp3.play(MusicList.get(i).getPath());

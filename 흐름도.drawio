@@ -1,0 +1,138 @@
+<mxfile host="app.diagrams.net" modified="2024-01-26T00:58:30.638Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="iTnyoIP8GT4a7QzH9a0m" version="23.0.2" type="device" pages="2">
+  <diagram name="페이지-1" id="M7ujDTDIxlOVYcq7Nbvg">
+    <mxGraphModel dx="1434" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="8inSwv47TdfOTtSs1LVF-8" value="Actor" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="90" y="585" width="62" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="8inSwv47TdfOTtSs1LVF-9" value="메인페이지" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="210" y="500" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="8inSwv47TdfOTtSs1LVF-11" value="행맨 게임" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="510" y="720" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="8inSwv47TdfOTtSs1LVF-13" value="점수 및 등급&lt;br&gt;정산" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="660" y="720" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="8inSwv47TdfOTtSs1LVF-17" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="550" as="sourcePoint" />
+            <mxPoint x="400" y="560" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="350" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8inSwv47TdfOTtSs1LVF-21" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="240" y="585" as="sourcePoint" />
+            <mxPoint x="240.5" y="700" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="240" y="585" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="8inSwv47TdfOTtSs1LVF-22" value="난이도 선택" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="360" y="720" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="fBiShF02M5B_dLzQdFXN-1" value="회원가입" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="414" y="450" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="fBiShF02M5B_dLzQdFXN-2" value="로그인" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="210" y="720" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="fBiShF02M5B_dLzQdFXN-3" value="회원탈퇴" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="414" y="530" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="fBiShF02M5B_dLzQdFXN-4" value="랭킹조회" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="414" y="370" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="fBiShF02M5B_dLzQdFXN-6" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="480" as="sourcePoint" />
+            <mxPoint x="400" y="430" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="350" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fBiShF02M5B_dLzQdFXN-7" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="520" as="sourcePoint" />
+            <mxPoint x="400" y="500" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="350" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fBiShF02M5B_dLzQdFXN-9" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="580" as="sourcePoint" />
+            <mxPoint x="390" y="620" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="350" y="580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fBiShF02M5B_dLzQdFXN-10" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="170" y="591.5" as="sourcePoint" />
+            <mxPoint x="200" y="577" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="170" y="591.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fBiShF02M5B_dLzQdFXN-11" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" target="8inSwv47TdfOTtSs1LVF-22" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="754.5" as="sourcePoint" />
+            <mxPoint x="350" y="755.5" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="330" y="754.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fBiShF02M5B_dLzQdFXN-12" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="480" y="754.5" as="sourcePoint" />
+            <mxPoint x="510" y="755" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="480" y="754.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fBiShF02M5B_dLzQdFXN-13" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="630" y="754.5" as="sourcePoint" />
+            <mxPoint x="660" y="755" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="630" y="754.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="fBiShF02M5B_dLzQdFXN-14" value="게임종료" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="414" y="610" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="fBiShF02M5B_dLzQdFXN-15" value="" style="endArrow=classic;html=1;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="290" y="702.5" as="sourcePoint" />
+            <mxPoint x="290" y="587.5" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="290" y="702.5" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="J_2vrl1m1R7lYh27HYxW" name="페이지-2">
+    <mxGraphModel dx="1434" dy="780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

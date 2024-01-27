@@ -6,10 +6,10 @@ public class GameMain {
 
 		// 게임실행공간
 				// 게임칩 가지고 오기
-				Pokemon p = new Pokemon();
+				//Pokemon p = new Pokemon();
 				// 게임칩 끼우기
-				insert(p);       // Pokemon 자료형 변수
-				
+				//insert(p);       // Pokemon 자료형 변수
+				insert(new Pokemon());
 				// 마리오 젤다 게임칩 가져오기
 				Mario m = new Mario();
 				insert(m);                     // 상속되있으므로 형변환 =업캐스팅 자동형변환= Pokemon이 부모 마리오는 부모를 받는다. 

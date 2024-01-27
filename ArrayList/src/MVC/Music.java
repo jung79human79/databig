@@ -20,10 +20,10 @@ public class Music {
 		// ---매서드 생성---
 		//1. 모든 필드 값을 채울 수있는 생성자
 		public Music(String title, String singer, int playTime, String path) {
-			super();
+			//super();
 			this.title = title;
 			this.singer = singer;
-			PlayTime = playTime;
+			this.PlayTime = playTime;
 			this.path = path;
 		}
 

@@ -33,7 +33,8 @@ public class MusicController {
 			if(mp3.isPlaying()) {
 				mp3.stop();
 			}	 
-			mp3.play(MusicList.get(num-1).getPath());	
+			mp3.play(MusicList.get(num-1).getPath());
+			i=num-1;
 		 return MusicList.get(num-1);
 		}
 		

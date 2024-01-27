@@ -21,24 +21,25 @@ public class MusicMain {
 
 			if (input == 1) {
 				System.out.println("====재생===="); // 출력도구 이므로 View
-                
+
 				System.out.print("어떤노래 선택 >> 1=HypeBoy,2=IAM,3=LoveLee,4=Smoke,5=한페이지가될수있게 >> "); // 재생시킬 노래 지정시키고 싶은 경우
 				int songN = sc.nextInt();
-                if(songN<=5 && songN >=1 ) {
-				Music m = con.play(songN); // play()매서드 호출 //매개변수입력
-				System.out.println(m.getSinger() + " - " + m.getTitle() + "이(가) 재생중입니다"); // 출력도구 이므로 View
-                }else {
-                	while (true) {
-                	System.out.println("다시선택하세요");
-                	System.out.print("어떤노래 선택 >> 1=HypeBoy,2=IAM,3=LoveLee,4=Smoke,5=한페이지가될수있게 >> ");
-                	songN = sc.nextInt();
-                	if(songN<=5 && songN >=1 ) {
-        				Music m = con.play(songN); // play()매서드 호출 //매개변수입력
-        				System.out.println(m.getSinger() + " - " + m.getTitle() + "이(가) 재생중입니다");
-        				break;
-                 }
-               }
-              }
+				if (songN <= 5 && songN >= 1) {
+					Music m = con.play(songN); // play()매서드 호출 //매개변수입력
+					System.out.println(m.getSinger() + " - " + m.getTitle() + "이(가) 재생중입니다"); // 출력도구 이므로 View
+				} else {
+					while (true) {
+						System.out.println("다시선택하세요");
+						System.out.print("어떤노래 선택 >> 1=HypeBoy,2=IAM,3=LoveLee,4=Smoke,5=한페이지가될수있게 >> ");
+						songN = sc.nextInt();
+						if (songN <= 5 && songN >= 1) {
+							Music m = con.play(songN); // play()매서드 호출 //매개변수입력
+							System.out.println(m.getSinger() + " - " + m.getTitle() + "이(가) 재생중입니다");
+							break;
+						}
+					}
+				}
+
 			} else if (input == 2) {
 				System.out.println("====정지====");
 

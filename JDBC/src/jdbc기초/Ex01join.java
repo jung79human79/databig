@@ -18,14 +18,14 @@ public class Ex01join {
 		   System.out.print("pw입력 : ");
 		   String pw = sc.next();
 		   System.out.print("이름입력 : ");
-		   String b_name = sc.next();
+		   String name = sc.next();
 		   System.out.print("나이입력 : ");
 		   int age = sc.nextInt();
 		   System.out.print("점수입력 : ");
 		   int score = sc.nextInt();
 
 			// JDBC(자바와 디비연결)
-			// JDBC 인테페이스 사용법
+			// JDBC 인테페이스 사용법 == 강제성 있는 틀 == 디비회사들과 연결하는 강제성 있는 틀
 			
 		   PreparedStatement psmt = null;
 		   Connection conn = null;
@@ -38,7 +38,11 @@ public class Ex01join {
 				// JDBC 드라이버란?
 				// : 자바에서 제공해주는 인테이스들을 디비회사들에서 상속을 받아서 로직을 구현한 클래스 파일들의 모음(일종의 API)
 				
-				Class.forName("com.mysql.cj.jdbc.Driver");   // ()안은 제네릭기법 ()은 추가한 jar파일의 위치임  // 이 Class는 static안줘도 된다 1순위로 된다.
+				Class.forName("com.mysql.cj.jdbc.Driver");
+				// 경로를 입력하면 에러 발셍== try catch 구문 사용 == 클래스 이름을 찾는 것을 시도하는데 에러 발생시 캐치해서 에러 내용을 보여준다.
+				// 에러원인은 보통 오타 혹은 jar파일 경로 잘못됨.
+				// ()안은 제네릭기법 ()은 추가한 jar파일의 위치임  
+				// 이 Class는 static안줘도 된다 1순위로 된다.
 				//<String> 제네릭 기법 String 자료형을 넣겠다 혹은 나만의 객체를 넣겠다
 				// <>안에 머 넣을지 보관할지 정하는 법= 제네릭기법
 				
@@ -52,7 +56,7 @@ public class Ex01join {
 		         //-> class path 선택 -> 우측 add external jar 선택
 		         // -> 원하는 jar파일 경로 선택 -> apply and close
 				
-				// 2.데이터베이스와 연결
+				// 2.데이터베이스와 연결 == 통로: 디비에 들어가는데 어디경로(주소)이고 비번은 무언인지 등이 필요하다.=이것이 Connection 인터페이스
 				// 준비물 3가지
 				// 1)연결경로
 				String url = "jdbc:mysql://localhost/jdbctest";
@@ -79,7 +83,7 @@ public class Ex01join {
 					System.out.println("연결실패");
 				}
 				
-				// 3. sql(퀴리문) 구문 전송
+				// 3. sql(퀴리문) 구문 전송 // 자바에서 쿼리문을 디비로 보내준다(저장한다)
 				// 3-1)퀴리문 작성
 				// id -> smhrd, pw-> 12345, name -> 정대주, age ->45, score ->90
 				//String sql = "INSERT INTO bigdatamember(id,pw,b_name,age,score) VALUES ('smhrd','12345','정대주',45,90)";
@@ -88,19 +92,26 @@ public class Ex01join {
 				String sql = "INSERT INTO bigdatamember(id,pw,b_name,age,score) VALUES (?,?,?,?,?)";
 				
 				// ?인자는 사용자로부터 어떤 데이터가 들어올지 모를 때 사용
-				// -->지정한 데이터 공간만큼 비워놓고 실행하기 전까지 대기
+				// -->지정한 데이터 공간만큼 비워놓고 실행하기 전까지 대기 == 자리만 만들어 놓은 것
+				// 자바  --> (통로) -->디비
+				// --> conn안에서 규격을 맞추어 보낸다
+				// --> conn통로에서 수레에 담아 보낸다면 이 수레가 규격이고 이름은 PreparedStatement 인터페이스
+				// --> conn이 수레를 만든다 == conn.prepareStatement
 				
 				 psmt = conn.prepareStatement(sql);  // 변수 타입은 메모 확인하면 됨 // PreparedStatement 인터페이스
 				
 				// ? 인자를 채우는 작업!
-				psmt.setString(1, id);        // 1은 첫번째 sql 컬럼 //기본키 이므로 중복값 입력 안됨.
+				psmt.setString(1, id);       //기본키 이므로 중복값 입력 안됨.
 				psmt.setString(2, pw);        // 메인함수 처음부분인 사용자가 입력한 값이 저장된다.
-				psmt.setString(3, b_name);
+				psmt.setString(3, name);
 				psmt.setInt(4, age);
 				psmt.setInt(5, score);
 				
 				
-				// 4 .sql문 실행
+				// 4 .sql문 실행  == 실행코드== psmt.executeUpdate()
+				// --> 테이블모양이 바뀌면 (영향을 주는 퀴리문에 사용함) == 추가,삭제,수정 퀴리문 == dml 쿼리문
+				// --> 테이블 모양에 변화를 주는 경우 executeUpdate() 사용 = 변화를 주는 퀴리문은 == 추가,삭제,수정
+				// --> 만약 select는 조회이므로 다른 코드로 실행문에 적용한다 ***(1/19일 오전 수업)
 				// sql에서  한개의 row(행=레코드)만 나와도 성공을 의미한다
 				// sql에서 콘솔창을 보면 먼가 성공시 row표시가 나온다 그 row가 숫자를 의미하므로 타입을 int로 한다
 				int row = psmt.executeUpdate();    // execute=실행하다 업데이트를 실행해서 sql의 row에 대입해라~
@@ -132,22 +143,30 @@ public class Ex01join {
 				                      // 예외사항이 왜 발생했고 어디서 문제가 나고 있는지 출력해주는 구문 -->개발시 사용
 				                     // --> 배포시에는 삭제하는 것이 좋음
 				//System.out.println("클래스를 못찾음");     // 사용자에 보여주는 코드
-			} finally {          // 자원을 다쓰면 닫아준다
+			} finally {         
+				// 자원을 다쓰면 닫아준다 == 자원== 디비의 데이터을 사용하면 닫아준다(보안)
+				// 디비를 다쓰면 연결통로을 닫는다.==역순으로 닫아 준다.
+				// 수레를 수거하고 통로도 닫는다.
 				// 위에서 예외 사항이 발생하더라도 반드시 한번은 들어오는 구간
+				// --> 처음 jar파일의 클래스를 못찾아도(ClassNotFoundException) 커리문 실행을 못해도(SQLException) finally 에서 반드시 닫아준다 
+				// --> 즉 연결이나 수레를 사용하지 않더라도 예외사항만 발생하더라도 반드시 finally는 거쳐서 닫아준다.
 				// 6. 디비 연결 종료-->자원반납
 				try {
 			// 자원을 반납할 때는 항상 사용한 역순으로 반납한다!***
 		    // 인테페이스 첫번째는 Connection 두번째는 PreparedStatement
 				
-				if(psmt!=null)                        // if문 중괄호 생략
+				if(psmt!=null)       // 잘 사용한 경우만    // if문 중괄호 생략
 					psmt.close();
 					if(conn!=null)                    // if문 중괄호 생략
 						conn.close();
-				} catch(SQLException e) {
+				} catch(SQLException e) {      //(Exception e) 해도 가능함
 					e.printStackTrace();
 				}
 				
-			}
+			}//finally
 	}
 
 }
+//Exception이 여기서는 두 가지인데 에러가 발생한다 해결책을 보면 여러개 인데 중 이경우 try catch문이 사용한다
+//catch문으로 에러를 찾아 보여준다는 의미인데 어차피 Exception은 상위 클래스이므로 두가지를 포함하는 부모클래스 이므로
+//업캐스팅해서 Exception만 사용한다.
