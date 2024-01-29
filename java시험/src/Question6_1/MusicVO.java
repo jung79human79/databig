@@ -45,7 +45,7 @@ public class MusicVO {
 	}
 	
 	public  String toString() {
-		
-		return title+singer+PlayTime;
+		return getTitle()+getSinger()+getPlayTime();
+		//return title+singer+PlayTime;
 	}
 }

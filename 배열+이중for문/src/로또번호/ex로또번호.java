@@ -8,7 +8,7 @@ public class ex로또번호 {
 	public static void main(String[] args) {
 
 		Random ran = new Random();
-		int[] lotto = new int[5];
+		int[] lotto = new int[10];
 
 		for (int j = 0; j < lotto.length; j++) {
 			lotto[j] = ran.nextInt(10) + 1;
@@ -21,6 +21,8 @@ public class ex로또번호 {
 			}
 		}
 		System.out.println(Arrays.toString(lotto));
+		System.out.println("\n");
+		System.out.println("정대주\n");
 		System.out.print("zzz");
 		System.out.println("zzz");
 		

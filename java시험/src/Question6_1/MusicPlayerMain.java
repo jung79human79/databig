@@ -33,25 +33,32 @@ public class MusicPlayerMain {
 
 				MusicList.add(new MusicVO(title, singer, PlayTime));
 				
-				System.out.println("제목: " + title);
-				System.out.println("가수: " + singer);
-				System.out.println("시간: " + PlayTime);
+//				System.out.println("제목: " + title);
+//				System.out.println("가수: " + singer);
+//				System.out.println("시간: " + PlayTime);
 
 			} else if (input == 2) {
 				System.out.println("=====전체 노래 목록======");
 
 				for (int i = 1; i <= MusicList.size(); i++) {
-					System.out.println(i +". 제목 : "+ MusicList.get(i - 1).getTitle() + "\t" + "가수 : "+MusicList.get(i - 1).getSinger()
-							+ "\t" + "시간 : "+MusicList.get(i - 1).getPlayTime());
+					System.out.println(i +". 제목 : "+ MusicList.get(i - 1).getTitle() + "\t가수 : "+MusicList.get(i - 1).getSinger()
+							+ "\t시간 : "+MusicList.get(i - 1).getPlayTime());
 				}
 
 			} else if (input == 3) {
+				System.out.println("=====전체 노래 목록======");
+				for (int i = 1; i <= MusicList.size(); i++) {
+					System.out.println(i +". 제목 : "+ MusicList.get(i - 1).getTitle() + "\t가수 : "+MusicList.get(i - 1).getSinger()
+							+ "\t시간 : "+MusicList.get(i - 1).getPlayTime());
+				}
+				
 				System.out.println("=====노래 삭제======");
 				System.out.print("삭제하고 싶은 번호 입력: ");
 				int num = sc.nextInt();
 				// MusicList.get(num-1);
-				if(num>0 && num <=MusicList.size())
+				if(num>0 && num <=MusicList.size()) {
 				System.out.println(MusicList.get(num-1).getTitle() + "을 삭제합니다");
+				}
 				MusicList.remove(num-1);
 
 			} else if (input == 4) {
@@ -64,10 +71,11 @@ public class MusicPlayerMain {
 				MusicList.clear();
 
 			} else if (input == 5) {
-
+				System.out.println("=====종료======");
 				break;
 			} else {
-				break;
+				System.out.println("정확한 숫자를 입력해주세요!!");
+				
 			}
 		}
 	}
