@@ -57,3 +57,6 @@ public class ex로또번호 {
 	}
 
 }
+
+
+

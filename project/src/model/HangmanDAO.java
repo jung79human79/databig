@@ -395,17 +395,32 @@ public class HangmanDAO {
 			
 			while (true) {
 				for (int i = 0; i < insertArr.size(); i++) {
-					if (i >= 1) {
-						if (insertArr.get(i - 1) == alpa) {
+					for (int j = 0; j < i; j++) {
+						if (insertArr.get(j) == insertArr.get(i)) {
 							errorBgm();
 							System.out.println(" (╬▔皿▔)╯입력한 알파벳 입니다");
 							insertArr.remove(insertArr.size() - 1);
+							i--;
 							found = true;
 						}
 					}
 				}
 				break;
 			}
+			
+//			while (true) {
+//			for (int i = 0; i < insertArr.size(); i++) {
+//				if (i >= 1) {
+//					if (insertArr.get(i - 1) == alpa) {
+//						errorBgm();
+//						System.out.println(" (╬▔皿▔)╯입력한 알파벳 입니다");
+//						insertArr.remove(insertArr.size() - 1);
+//						found = true;
+//					}
+//				}
+//			}
+//			break;
+//		}
 
 			// arr과 alpa가 일치할 경우 answerArr배열에 alpa값 삽입
 			if(!found) {
@@ -435,12 +450,21 @@ public class HangmanDAO {
 			System.out.println();
 			System.out.println();
 			// 한번 고른 것은 ★ 모양으로 바꿔줌
+			
 			for (int i = 0; i < alpaArr.length; i++) {
-				if (alpaArr[i] == alpa) {
-					alpaArr[i] = '★';
-				}
+			if (alpaArr[i] == alpa) {
+				alpaArr[i] = '★';
+				//System.out.print(alpaArr[i] + "\t");
+				
+			}//else{
+				//errorBgm();
+				//System.out.print(alpaArr[i] + "\t");
+				//if (i == 8 || i == 17) {
+				//	System.out.println();
+				//}
 				
 			}
+		
 
 			// 별 모양으로 바뀐 배열 출력
 			for (int i = 0; i < alpaArr.length; i++) {

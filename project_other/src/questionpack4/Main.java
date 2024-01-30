@@ -19,18 +19,18 @@ public class Main {
 	      MP3Player mp3 = new MP3Player();
 	      MP3Player mp3_bgm = new MP3Player();
 
-	      String comPath = "C:\\Users\\wjd1e\\OneDrive\\바탕 화면\\javaStudy\\project_other\\player\\";
+	      String comPath = "C:\\Users\\wjd1e\\OneDrive\\바탕 화면\\javaStudy\\project_other\\BGM\\";
 	      ArrayList<Music> musicList = new ArrayList<Music>();
 	      // ArrayList에 BGM추가
 
-	      Music bgm = new Music("bgm", comPath + "end.mp3");
-	      Music correct = new Music("correct", comPath + "error.mp3");
-	      Music die = new Music("die", comPath + "play.mp3");
-	      Music incorrect = new Music("incorrect", comPath + "rope.mp3");
-	      Music select = new Music("select", comPath + "scream.mp3");
-	      Music start = new Music("start", comPath + "success.mp3");
-	      Music enter = new Music("enter", comPath + "end.mp3");
-	      Music appear = new Music("appear", comPath + "error.mp3");
+	      Music bgm = new Music("bgm", comPath + "bgm.mp3");
+	      Music correct = new Music("correct", comPath + "correct.mp3");
+	      Music die = new Music("die", comPath + "die.mp3");
+	      Music incorrect = new Music("incorrect", comPath + "incorrect.mp3");
+	      Music select = new Music("select", comPath + "select.mp3");
+	      Music start = new Music("start", comPath + "start.mp3");
+	      Music enter = new Music("enter", comPath + "enter.mp3");
+	      Music appear = new Music("appear", comPath + "appear.mp3");
 
 	      musicList.add(bgm);
 	      musicList.add(correct);
@@ -395,7 +395,7 @@ public class Main {
 
 	               } else if (choice == 2) {
 	                  // BGM(select)
-	                  mp3.play(musicList.get(0).getPath());
+	                  mp3.play(musicList.get(5).getPath());
 	                  //
 	                  System.out.println("\t\t\t\t 게임을 종료합니다.");
 	                  mp3_bgm.stop();
