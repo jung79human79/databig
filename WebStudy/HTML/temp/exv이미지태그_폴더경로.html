@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폴더 경로 이미지 태그</title>
+</head>
+<body>
+<!--   >> ../ : 폴더 경로를 하나 벗어난다  
+            / : 루트 경로로 자동  (가장 바같쪽 폴더경로=html)-->
+<!-- 이번처럼 새로운 폴더를 만들고 새로운 파일을 생성한 후 이미지를 가져오려면 
+     현재 폴더에서 경로를 한칸 벗어나야 이미지가 저장된 폴더로 가서 파일을 가져올 수 있다 -->
+<img src="../assets/image/img.jpg" alt="">
+<br>
+<img src="../assets/image/img.jpg" alt="">
+<br>
+<!-- 참고) /을 톻한 경로는 브라우저에 적용 안됨 -->
+<img src="/HTML/assets/image/img.jpg" alt="">
+<br>
+<!-- 절대경로주소 : 어떤 파일이 가진 고유 경로값--> 
+<!-- 절대경로주소는 어떤 경우든 출력된다  -->
+<img src="C:\Users\wjd1e\OneDrive\바탕 화면\WebStudy\HTML\assets\image\img.jpg" alt="" height="100px" width="100px">
+
+
+
+
+    
+</body>
+</html>
