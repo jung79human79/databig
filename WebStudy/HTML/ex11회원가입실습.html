@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입실습</title>
+</head>
+
+<body>
+    <!-- textarea 태그: <textarea cols='56' rows='5'></textarea>  -->
+    <form action="#">
+        <!-- border를 지우고 색을 입히면 윤곽 나온다 -->
+        <!-- 색의 사이즈도 지정을 안해주면 데이터에 맞게 색이 보인다 -->
+        <table width="400px">
+            <!-- (tr>td*2)*4 -->
+            <!-- step1 -->
+            <tr bgcolor="gray" height="50px">
+                <th align='left' colspan="2">step1 : 아이디 / 비번 입력</th>
+            </tr>
+            <tr bgcolor="whitesmoke" height="35px">
+                <td align="right">아이디:</td>
+                <td><input name="id" maxlength="15" placeholder="아이디" autofocus type="text"></td>
+            </tr>
+            <tr bgcolor="whitesmoke" height="35px">
+                <td align="right">비밀번호:</td>
+                <td><input type="password" name="pw1"></td>
+            </tr>
+            <tr bgcolor="whitesmoke" height="35px">
+                <td align="right">비밀번호 확인 :</td>
+                <td><input type="password" name="pw2"></td>
+            </tr>
+
+            <!-- step2 -->
+            <tr bgcolor="gray" height="50px">
+                <th align='left' colspan="2">step2 : 개인정보</th>
+            </tr>
+            <tr bgcolor="whitesmoke" height="35px">
+                <td align="right">성별 :</td>
+                <td>
+                    남자<input type="radio" name="gender" value="남자">
+                    여자<input type="radio" name="gender" value="여자">
+                </td>
+            </tr>
+            <tr bgcolor="whitesmoke" height="35px">
+
+                <td align="right">혈액형 :</td>
+                <td>
+                    <select name="blood">
+                        <option value="">A형</option>
+                        <option value="">B형</option>
+                        <option value="">O형</option>
+                        <option value="">AB형</option>
+                    </select>
+                </td>
+            </tr>
+            <tr bgcolor="whitesmoke" height="35px">
+                <td align="right">생일 : </td>
+                <td><input type="date"></td>
+            </tr>
+
+            <!-- step3 -->
+            <tr bgcolor="gray" height="50px">
+                <th align='left' colspan="2">step3 : 선호도</th>
+            </tr>
+            <tr bgcolor="whitesmoke" height="35px">
+                <td align="right">취미 :</td>
+                <td>
+                    축구<input name="hobby" type="checkbox" value="축구">
+                    야구<input name="hobby" type="checkbox" value="야구">
+                    농구<input name="hobby" type="checkbox" value="농구">
+                </td>
+            </tr>
+            <tr bgcolor="whitesmoke" height="35px">
+                <td align="right">좋아하는 색깔 :</td>
+                <td><input type="color"></td>
+            </tr>
+
+            <!-- step4 -->
+            <tr bgcolor="gray" height="50px">
+                <th align='left' colspan="2">step4 : 적고 싶은 말</th>
+            </tr>
+            <tr bgcolor="whitesmoke" height="35px">
+                <td colspan="2">
+                    <!-- 5행 56열 : textarea의 사이즈를 반영한다-->
+                    <!-- cols의 수치가 table width="400px"을 넘기면 그 만큼 표의 너비가 확장 
+                    만약 400이하로 줄면 400너비는 유지되면서 textarea가 축소된다
+                    textarea태그의 사이즈 융통성 성질이 적용돤 것 같다 -->
+                    <textarea cols="56" rows="5"></textarea>
+                </td>
+            </tr>
+            <!-- 사이즈나 높이 너비를 안 주면 안의 데이터에 맞게 조절이 된다-->
+            <tr align="center" bgcolor="whitesmoke">
+                <!-- align="center"는 tr td 모두에서 적용된다. -->
+                <!-- td는 사실 각 tr당 2개이다 1개의 td라면 열 병합을 줘야 한다 -->
+                <!-- tr의 백그라운드 색도 그 행의 열이 2개이거나 병합되어야 온전히 색이 채워진다 -->
+                <td colspan="2">
+                    <input type="reset" value="초기화">
+                    <input type="button" value="정대주">
+                    <input type="submit" value="제출">
+                </td>
+
+
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>
+<!-- ★ 자주 생기는 문제! ★
+1. 내꺼는 표가 갑자기 길어지는데?
+ => colspan 안함 
+
+2. 왼쪽 정렬? => align 
+
+3. 제출/초기화 가운데 정렬이 안되는데? => colspan 안함 
+
+4. 표가 뭔가 분리되어있는 느낌?
+ => table 여러개 씀 
+
+5. textarea 안에 이상한 글자가?
+=> textarea 끝태그 안씀 
+
+6. 난 여기에 안적었는데 갑자기 맨 위에 생김?
+=> <td> 나 <th> 안에 안적었거나 끝태그가없는 것 
+     -->
