@@ -1,0 +1,24 @@
+/* css문법 작성 가능 */
+/* html 태그안에 style 태그안의 코드를 복사해온다 */
+/* style 태그는 html의 태그이므로 태그안의 것만 복사해온다 */
+/* 그것이 바로 css문법이자 코드이다 */
+/* 우리는 css문법을 그냥  html 태그안에 style 태그안에서 작성하는 방식 (내부선언 방식)을 주로 해왔다*/
+/* 이렇게 css파일을 별도로 분리 하고( mycss.css) html파일에서 link태그를 사용하여 css파일과 link하는 방식이 외부선언 방식  */
+
+
+
+div {
+    width: 100px;
+    height: 100px;
+    background-color: aquamarine;
+
+}
+
+#temp {
+
+    width: 100px;
+    height: 100px;
+    background-color: red;
+
+
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>패딩연습</title>
+    <style>
+        @font-face {
+            font-family: 'TTHakgyoansimMonggeulmonggeulR';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimMonggeulmonggeulR.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        div {
+            width: 100px;
+            height: 100px;
+        }
+
+        /* 패딩
+        :테두리와 내용을 기준으로 안쪽여백
+        >>html 요소(태그들)의 크기에 영향을 미침
+        ** 함께 사용하면 좋은 속성**
+        box-sizing --> 박스요소을 화면에 표시하는 방식 지정
+        - content-box(기본값) : 위의 div의 너비와 높이 수치를 그대로 내용 영역에 표시하는 것 -> 따라서 패딩수치는 패딩범위로~
+        - border-box : 위의 div의 너비와 높이 수치를 패딩값 포함해서 설정 -> 패딩수치는 패딩범위로 가고 내용 영역의 너비와 높이 수치는 패딩수치를 빼서 적용된다
+        즉 원래 100이 내용영역에 가는 것인데 그 100이라는 수치가 border안쪽영역으로 적용되는 것 그리고 패딩값을 포함하니
+        패딩값은 당연히 패딩범위 줘야하니 content영역의 수치가 작아질 수 밖에~~
+        쉽게 border-box속성에서는 div의 너비 높이가 content영역이 아니고 border안쪽영역이라고 보자
+         */
+        #red {
+            background-color: red;
+            color: yellow;
+
+
+            /* 웹브라우저 f12 개발자도구의 style을 보자->
+            보더안쪽 범위만 보면 패딩이 10이므로 보더안쪽 전체 너비는 120, 높이는 120
+            내용영역이 100*100 패딩이 4방향 10 */
+            padding: 10px;
+
+            /* 웹브라우저 f12 개발자도구의 style을 보자->
+             보더안쪽 범위만 보면 패딩이 10이지만  패딩값 포함이므로 보더안쪽 전체 너비는 100, 높이는 100
+             내용영역이 80*80 패딩이 4방향 10 */
+              box-sizing: border-box;
+
+
+             /* box-sizing: content-box; */
+            /*content-box는 기본값이므로 생략해도 됨 즉 패딩을 주는 것 그대로 범위를 변경
+            하지 않고 적용되므로~ 즉 이 속성을 쓴다면 100% border-box로 설정해야 한다  */
+
+
+
+        }
+
+        #blue {
+            background-color: blue;
+            padding-left: 10px;
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!--  -->
+    <div id="red">글자글자글자글자글자글자글자글자글자글자글자글자</div>
+    <div id="blue"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테두리2</title>
+<style>
+    /* 모서리를 둥글게 만드는 속성
+    border-radius
+    : px 단위로 값 부여
+    : %는 가로 세로길의 상대적 적용 >> 4변이 동일한 길이를 가졌을 때 사용하기 >>정사각형
+    : 직사각형이라면 %로 주면 가로 길이의 50% 세로 길이의 50%를 적용하므로 이상한 형태 
+    */
+div{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    /* border-radius: 10px;  -> 전체 4꼭지점을 변환 */
+    /* 50px -> 가로세로 100px이므로 50px는 4방향의 절반을 깍는 것이므로 원형   
+       50% -> 정사각형에서 50%는 원형  */
+    /* border-bottom-left-radius: 20px; */
+    /* border-bottom-right-radius: 50%;   */
+    /* border-top-left-radius: 50%;  */
+    border-radius: 50px;
+
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+    
+<div></div>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계층선택자</title>
+    <STYLE>
+        @font-face {
+            font-family: 'TTHakgyoansimMonggeulmonggeulR';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_keris@1.0/TTHakgyoansimMonggeulmonggeulR.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        /* ul태그를 기준으로 안쪽의 자식인 li태그 선택 */
+        ul>li {
+            font-size: 20px;
+        }
+
+        /* ul태그를 기준으로 안쪽의 자식인 li태그 중 클래스명인 lang만 선택 */
+        ul>.lang {
+            color: red;
+        }
+
+        /*  ul태그를 기준으로 자손선택자를 사용해서 자바라는 글자를 노란색으로*/
+        /* 스페이스(공백가 자손 선택자 */
+        ul a {
+            color: yellow;
+        }
+
+        /* ul li{ 
+            color:yellow;
+        } 
+        자식도 자손이므로 노란색이 되는데 위에서 ul>.lang이 우선이므로 
+        정재은 정우성 정순채는 빨강 그대로이고 정대주는 자식이 아니라 손자이므로 
+        노란색 적용이 안되고 기본컬러인 블랙...
+        */
+
+        /*  자식인 li도 결국 자손이다.*/
+        ul li {
+            font-family: 'TTHakgyoansimMonggeulmonggeulR';
+            /*정재은 정우성 정순채는  #db~li가 우선이므로 궁서체을 유지하고
+            정대주와 database는 폰트가 변경
+            ul li{color}는 정대주가 미변경인데 폰트는 변경됨
+            */
+        }
+
+        /* id값이 db인 태그를 기준으로 인접형제 선택자
+        인접은 정재은
+        형제는 디비 밑에 모두 (방향은 기준=db에서 아래쪽/위쪽은 아님)
+        근접형제:(+기호사용) 선택해서 글자 크기 조절해보자
+        */
+        #db+li {
+            /* 정재은만 변경됨 */
+            font-size: 36px;
+        }
+
+        /* id값이 db인 태그를 기준으로 모든 형제
+        폰트를 궁서로~ */
+        #db~li {
+            /* 정재은 정우성 정순채 변경 */
+            font-family: '궁서';
+        }
+
+        /* p태그 중에서 클래스가 lang 인 것만 선택 
+        :.lang를하면 p태그와 li태그 에서 클래스가 lang 인것 모두가
+        선택되는데 여기서는 클래스가 lang 이면서 p태그만 선택함
+        >> 방법 : 태그.클래스명
+        */
+        p.lang {
+
+            font-size: 56px;
+        }
+    </STYLE>
+
+
+
+</head>
+
+<body>
+
+
+    <!-- 순서가 없는 리스트(목록)태그 : ul -->
+    <!-- ul태그:부모, li태그들은 자식 
+        형제태그 -> 같은 선상 -->
+    <!-- 계층선택자
+    :특정 태그의 위치를 기준으로 계층적 구조로 요소를 선택
+    1.자손 선택자 : 공백(ul li)(ul a)사용 / 손자도 자식도 자손이다.
+    2.자식 선택자 : >사용 (ul>li)(li>a)
+    3.인접형제 선택자 : +기호 (li+li)
+    4.형제(후행) 선택자 : ~기호 (li~li)
+-->
+
+
+    <!-- 그룹 선택자 : 컴마를 기준으로 여러개 태그를 선택할 때
+>> p,h1,h2,h3 
+-->
+    <h1>우리가 지금까지 배운 언어</h1>
+    <ul>
+        <li id="java">
+            <!-- #은 링크를 다는데 아무것도 연결안됨 -->
+            <!--  #은 링크를 다는데 경로가 현재페이지-->
+            <a href="#">정대주</a>
+        </li>
+        <li id="db">database</li>
+        <li class="lang">정재은</li>
+        <li class="lang">정우성</li>
+        <li class="lang">정순채</li>
+    </ul>
+
+    <p class="lang">안녕하세요</p>
+    <p class="lang">안녕하세요</p>
+    <p class="lang">안녕하세요</p>
+
+</body>
+
+</html>

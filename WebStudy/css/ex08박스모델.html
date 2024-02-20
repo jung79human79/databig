@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스모델</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+
+        }
+
+
+        /* 마진 상쇄현상
+        >> 2개이상의 block속성의 요소의 마진값이 겹치면 
+        더큰쪽으로 작은 마진값이 상쇄되는 현상 
+        >> #blue코드가 #red코드 아래에서 top 100px 를 주었는데도(코드의흐름) 상쇄된다 */
+        #red {
+            background-color: red;
+
+            /* margin: 50px;  ->위 아래 왼,오 전부 50만큼 여백*/
+            /* margin-bottom: 50px; -> 아래로 50만큼 여백*/
+            /* margin: auto;  -> 가운데 정렬 / 즉 0px 330.2px  상하는 마진이 0 좌우 330.2(디바이스 (전체너비-div너비)/2) 핵심은 상하마진이 0 */
+            margin-bottom: 200px;
+
+
+
+
+        }
+        #blue {
+            background-color: blue;
+            /* margin-left: 100px; */
+            /* margin-top: 100px; */
+            margin: 100px 0px 0px 100px;
+        }
+
+        #green {
+            background-color: green;
+            margin-left: 200px;
+
+        }
+
+        #grey {
+            background-color: grey;
+            margin-left: 300px;
+        }
+
+        
+    </style>
+
+
+</head>
+
+<body>
+    <!-- div#red+div#blue+div#green+div#grey   + : 인접해서 태그를 생성->아래방향으로 태그생성-->
+    <!--박스모델 (공간분할태그)
+    :모든 태그는 사각형으로 구성이 됨 : 디바이스가 사각형 ->공간설계가 용이
+    :부피감을 결정하래 사용함
+    >> 웹페이지 상의 레이아웃을 설계시 중요
+    >> 웹브라우저 f12 개발자도구의 style을 학습하자!
+    - width 너비지정 : 콘텐츠 영역을 기준으로
+    - height 높이지정 : 콘텐츠 영역을 기준으로
+    - border : 테두리(경계선)
+    - padding : 테두리와 내용을 기준으로 안쪽여뱍
+    - margin : 테두리기준으로 바깥쪽 여백
+    -->
+
+    <div id="red"></div>
+    <div id="blue"></div>
+    <div id="green"></div>
+    <div id="grey"></div>
+    
+
+
+    
+
+</body>
+
+</html>

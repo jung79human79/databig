@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>공간분할</title>
+    <style>
+        /* div,p 태그의 가시속성인 block을 
+        span태그 inline 속성으로 변경 
+        >> display 사용
+        */
+        /* contents영역이므로 개행도 안됨 */
+
+        /* 그룹 선택자:컴마로 여러개 선택가능 */
+        div,p{
+            /* div태그범위는  span태그와 같은 범위로 변경  */
+            /*  p 태그 범위는  span태그와 같은 범위로 변경처럼 브라우저상에는 보이나
+            실제 개발자모드의 스타일을 보면 변경 전의 마진값을 그대로 유지한다*/
+            display: inline;
+        }
+
+        
+        /* span태그 inline속성-> block */
+        /* 한 줄을 전부 차지하므로 개행 */
+        span {
+            /* span태그는div태그와 같은 범위로 변경  */
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!--공간분할요소(태그) 
+1.div : 큰영역분할
+2.p : 문단 영역 분할
+3. span : 세부적인 영역 분할
+    ***가시속성***
+>> 화면에 보여지는 방식을 지정하는 속성
+1.block : 
+-> div태그 , p태그의 기본값 -> 한 줄을 전부 차지하는 속성값
+2.inline : 
+-> span태그의 기본값
+-> 내용(contents)영역 까지만 차지하는 속성값
+3.none : 안보이게 하는 속성(화면에 안보였으면 하는 내용)
+ 
+-->
+
+    <div>정보처리기사</div>
+    <p>내일시험</p>
+    <!-- span태그는 개행안됨 -->
+    <span>과락주의</span>
+    <span>할수있다!하면된다!</span>
+
+
+
+</body>
+
+</html>
