@@ -5,7 +5,10 @@
 /* 우리는 css문법을 그냥  html 태그안에 style 태그안에서 작성하는 방식 (내부선언 방식)을 주로 해왔다*/
 /* 이렇게 css파일을 별도로 분리 하고( mycss.css) html파일에서 link태그를 사용하여 css파일과 link하는 방식이 외부선언 방식  */
 
-
+/* 4) import 방식
+>> css파일 안에서 다른 css파일을 불러들일 때 사용 */
+/* import(가져오고 싶은 css파일 링크) */
+@import url(temp.css);
 
 div {
     width: 100px;
