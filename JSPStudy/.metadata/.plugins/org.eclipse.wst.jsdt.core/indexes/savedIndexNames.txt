@@ -1,0 +1,8 @@
+INDEX VERSION 1.4+C:\Users\wjd1e\OneDrive\πŸ≈¡ »≠∏È\JSPStudy\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+468591750.index
+1272437815.index
+135371456.index
+3007014681.index
+2083811524.index
+1989872882.index
+3097532730.index
