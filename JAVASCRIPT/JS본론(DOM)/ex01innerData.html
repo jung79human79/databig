@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- dom은 태그 하나하나를 객체로 만드는 것이다  -->
+    <!-- 자바스크립안에서 모든 HTML 정보를 알고 있는 최상위 객체가 document이다  -->
+    
+    <h1 id ="txt"><span>안녕하세요</span></h1>
+    <h1 id="ttt"><span>정재은</span></h1>
+    <h1 id="xxx"><span>정우성</span></h1>
+    <h1 id="aaa"><span>정순채</span></h1>
+    <h1 id="bbb"><span>김기순</span></h1>
+    <h1 id="ccc"><span>정송</span></h1>
+    <h1 id="ddd"><span>박선애</span></h1>
+    
+    <!-- 인라인 방식으로 버튼 연결 -->
+    <!-- "changerxt()" -> 함수명을 노출하면 해캥위험 -->
+    <!-- 직빵으로 자바스크립에서 만든 함수를 호출 -->
+    <button onclick="changerxt()" >변경1</button>
+    
+    <!-- 일반함수(이벤트핸들러방식) -->
+    <button id ="btn">변경2</button>
+    
+    <!-- 익명함수로 버튼 연결 -->
+    <button id ="btn2">변경3</button>
+   
+   <script>
+        // 사용자의 이밴트를 감지해서 페이지 변경
+        // 새로고침해도 페이지가 변경된 내용을 그대로 고장
+        // 접근법과 함수만들기가 중요
+        
+        // 자바언어와 html태그를 같이 사용 --> 자바스크립을 콘솔창에 출력하는게 아니라 HTML태그를 가져와서 콘솔창에 출력 
+        // h1태그의 컨텐츠 값을 콘솔창에 출력 --> 그러기위해 자바스크립 영역에서 ID가 txt인 태그(요소)를 get해야한다
+        // 자바언어와 html 2개 코드를 연결  --> document 오브젝트를 사용 --> 모든태그들을 객체화 시켰으니 ID값으로 특정 태그를 가져올수있다
+         let h1 = document.getElementById("txt").innerHTML  
+         // 태그(요소)안의 태그를 출력
+        console.log(h1)   // --> <span>안녕하세요</span>
+
+
+        let h2 = document.getElementById("txt").innerText
+        // 태그(요소)의 컨텐츠 즉 텍스트를 출력 --> h1>span태그 안의 텍스트만 출력
+        console.log(h2)  // --> 안녕하세요
+        
+        // 요소접근..innerHTML --> html태그를 인식 --> 주로 사용함
+        // 요소접근..innerText --> 태그를 무시하고 순수 컨텐츠만 출력 
+
+        // 특정요소의 컨텐츠를 수정 --> html의 태그의 켄텐츠를 수정하는 자바스크립코딩
+        let h3 = document.getElementById("txt").innerHTML="점심입니다"
+        console.log(h3)  // --> 점심입니다  --> H1태그를 찾아서 안에 HTML코드를 "점심입니다"로 변경 즉 span가 없어지고 컨텐츠만 삽입됨
+        // 태그를 인식하고 태그까지 변경
+        let h4 = document.getElementById("ttt").innerHTML="<a>정대주</a>"
+        console.log(h4) // --> <a>정대주</a>  --> 콘솔창에 태그를 보여준다 즉 span가 없어지고 a태그가 적용
+
+        let h5 = document.getElementById("xxx").innerText="<a>정대주</a>"
+        console.log(h5)   // --> <a>정대주</a>  --> 콘솔창에 텍스트를 보여준다. --> h1태그안의 컨테츠를 변경 그러다 보니 원래 span태그도 없어짐 원래 span태그도 h1의 컨텐츠였다
+        
+        // 따옴표 중요 --> 문자열을 작성시 ""묶는 경우에는 속성에 따옴표기 필요하면 ''로 처리
+        // 반대경우에는 반대로 작성.
+        let h6 = document.getElementById("aaa").innerHTML="<a href = 'https://www.naver.com/'>네이버1</a>"
+        console.log(h6)
+        // 자바스크립 함수를 사용해 html의 태그를 수정하고 연결하자
+        function changer() {
+            document.getElementById("bbb").innerHTML="<a href='https://www.naver.com/'>네이버2</a>"
+        }
+        changer()
+        
+        
+        // 이제 html 버튼 3개 태그를 자바스크립에서 3가지 코딩으로 버튼태그를 실행시 연결해보자
+        // 우선 버튼태그와의 연결을 위해 함수제작하기
+        // 버튼을 누를 때 특정기능을 호출되먄서 변경되야 하므로 함수를 자바스크립에서 만든다.
+        // 3가지 방식 모두 함수가 필요하다
+        function changerxt() {
+            document.getElementById("ccc").innerHTML="<a href='https://www.naver.com/'>네이버3</a>"
+        }
+
+        // 1 인라인 방식 --> 버튼태그와 함수를 연결하기 위해  --> 태그에 함수명을 속성으로 주기 (onclick="changerxt()")
+        // 변경1 버튼 누르면 h1태그가 네이버3 링크로 변경되고 연결도 가능 
+        //함수를 연결시키는 방법
+        //1.태그안에 직접 작성하는 인라인 방식
+        //단점 : 보안에 취약 ,이벤트를 1개 밖에 명시할 수가 없다
+        //사용처 : alert()처럼 내장함수(누구나 아는 기본)는 사용해도 좋다
+
+        // 2. 이벤트핸들러를 통한 이벤트 부여  --> 컴에게 자바스크립으로 알려줌 개발자도구에서 함수명이 안보임 ->보안굿
+        function zzz() {
+            document.getElementById("ddd").innerHTML="<a href='https://www.naver.com/'>네이버4</a>"
+        }
+        
+        //document.getElementById("btn").addEventListener("click",zzz()) // () 쓰면 안됨 --> changerxt()은 바로 실행을 해버린다
+        
+        document.getElementById("btn").addEventListener("click",zzz)
+        // .addEventListener함수 사용
+        // 컴은 html태그를 먼저 읽고 dom으로 변환을 한다 그 후 자바스크립 코드를 살핀다 위에서 아래로 오면서 
+        // 위의 코드중 zzz()을 읽고는 바로 함수를 호출해버린다 고로 ()을 지워 실행이 바로 안되게끔 한다
+        // 컴은 자바스크립 코드를 읽을 때 함수()가 있으면 실행을 해버린다...
+        // 주의점 !이벤트를 붙일 때 ()을 제거하고 함수명만 작성할 것 ->
+        // 변경2를 누르면 h1태그가 네이버4 링크로 변경되고 연결도 가능 
+
+        
+        // 3. 익명 함수 --> 이름이 없는 함수 --> 오직하나의 요소를 위해 동작하는 함수를 제작
+        // 버튼 3에게만 연결
+        // 직접 addEventListener함수의 매개변수에 익명함수을 코딩한다
+
+        document.getElementById("btn2").addEventListener("click",function(){
+             alert("익명함수")
+        })
+        // 변경3을 누르면 익명함수의 실행코드인 alert("익명함수")을 표출
+
+        
+        
+        // 참고 버튼을 누르면 먼가 바뀌는데 버튼 누르기 전으로 가려면 가장 원시적인 방법은 새로고침...
+        // 혹은 네이버 링크로 이동후 뒤로가기 하면 그 자체가 새로고침이 되므로 누르기 전으로 복귀 
+        // 즉 동기식 통신으로 원상복귀
+        // 버튼누르고 변경되는 것은 비동기식 통신 
+        // file:///C:/Users/wjd1e/OneDrive/%EB%B0%94%ED%83%95%20%ED%99%94%EB%A9%B4/JAVASCRIPT/JS%EB%B3%B8%EB%A1%A0(DOM)/ex01innerData.html
+        // 위의 url은 변경안됨 그대로 유지됨
+        // 버튼코딩 전 코드는 자바스크립코드로 기존 html코드를 수정해버럈다 고로 새로고침해도 기존 html코드로는 변경안됨
+        // 그러나 버튼코드는 자바스크립에서 변경한 게 아니고 이벤트를 행할시 자바스크립의 함수코드를 호출하여 변경하는 것이므로
+        // 새로고침하면 원래 html코드로 온다 그래야 또 이벤트를 내서 함수를 호출해 변경할 수 있으므로~
+
+        // 실제로 버튼을 실행시 변경되는 것이 자바스크립의 본 모습이다
+        // 즉 사용자의 이벤트를 감지해서 먼가 액션을 취하는 것이 자바스크립이다
+
+
+
+        
+
+
+    </script>
+</body>
+</html>

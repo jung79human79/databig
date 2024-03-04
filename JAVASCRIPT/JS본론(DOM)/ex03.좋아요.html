@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="txt">0</p>
+    <button id="plus" onclick="make()">+1 증가</button>
+    <button id="minus" onclick="make2()">-1 감소</button>
+
+    <script>
+
+        //let num = Number(document.getElementById("txt").innerHTML) //--> 전역으로 두면 함수 호출시 적용이 안됨
+        // 1.각각 함수를 제작하고 버튼에 연결
+
+        // 2. 증가버튼을 누르면 0 데이터가 1씩 증가
+        function make() {
+            // p태그의 내용을 가지고 와서 숫자로 변경(형변환)
+            let num = Number(document.getElementById("txt").innerHTML)
+            // 변경된 데이터에 1을 더하겠다
+            //num + 1
+            console.log(num + 1)  // 1씩 증가하는지 검증 =디버깅
+            // 변경된 데이터를 다시 p태그에 넣어줘
+           document.getElementById("txt").innerHTML = num + 1 // --> 연산되고 숫자로 출력됨
+            //document.getElementById("txt").innerHTML += 1   --> 문자열의 합 즉  011111~~~
+           // document.getElementById("txt").innerHTML  = +1  --> 1을 문자열로 보고 1만 계속출력
+            console.log(num + 1)
+        }
+
+        //3.감소버튼을 누르면 0 데이터가 1씩 감소
+        // 조건! 0밑으로는 기능이 실행되지 않게(마이너스값이 출력되지 않게)
+
+        let aa = document.getElementById("txt").innerHTML
+        console.log(aa)   // --> 문자열로 0
+
+        function make2() {
+            let num1 = Number(document.getElementById("txt").innerHTML)
+            console.log(num1) //-->숫자
+            if( num1==0 ){    // num1<=0
+                document.getElementById("txt").innerHTML = 0
+            }else{
+                document.getElementById("txt").innerHTML = num1 - 1
+                let bb = document.getElementById("txt").innerHTML = num1 - 1
+                console.log(bb)  // -->숫자
+            }
+
+        }
+
+
+
+        // 실습정리
+        // 프로그램언어 라는건 컴과 내가 소통하는 수단
+        // 코드를 작성할 땐 반드시 세세하게 컴에게 줄 명령을 인지(타이핑주석정리)
+        // 최신화된 데이터를 받아오자 --> 지역변수와 전역변수의 차이 
+        // 내용을 변경 할때는 반드시 최신화된 데이터를 반영 -> 함수내 지역변수
+        // 콘솔창 잘 활용(디버깅)
+        // 값이 올바르게 반영이 되어있나 체크
+        // 코드의 흐름상 에러가 나는 부분을 찾을 때(코드 중강중간  콘솔입력해보기)
+    
+    </script>
+
+
+
+</body>
+
+</html>
