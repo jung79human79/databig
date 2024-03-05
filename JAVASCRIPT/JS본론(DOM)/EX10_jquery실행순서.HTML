@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--  제이쿼리 사용하기 위해서는 임포트 작업을 진행  -->
+    <script src ="jquery-3.7.1.min.js"></script>
+    <script>
+
+        // 코드의 실행순서를 html이 다 만들어지고 난 후에 실행하겠다
+        // 대부분 오픈소스에는 반드시 작성이 되어있다
+        // window.onload()
+
+        $(document).ready( function(){
+
+            $("#txt").css("color","red")
+
+        } )
+
+    </script>
+
+
+</head>
+<body>
+   <h1 id="txt">텍스트</h1>
+  
+
+
+</body>
+</html>
