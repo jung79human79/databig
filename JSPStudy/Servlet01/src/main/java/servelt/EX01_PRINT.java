@@ -33,10 +33,10 @@ public class EX01_PRINT extends HttpServlet {
 		// 웹 화면에 출력문 띄우기 -->도구필요
 		PrintWriter out = response.getWriter();
 		
-		// out.print("hello world!!"); --> 영문은 인코딩 없이 가능하다
+		out.print("hello world!!<br>"); //--> 영문은 인코딩 없이 가능하다
 		
 		// 응답전에 한글 인코딩해야함 --> 매서드 최상단에서 코딩
-		//out.print("정재은");
+		out.print("정재은");
 		
 		// 태그 출력 가능 --> 위의 코드 setContentType("text/html) 주었으므로~ --> 즉 페이지에 텍스트와 함께 태그도 사용가능
 		out.print("<h1>정재은</h1>");

@@ -1,0 +1,33 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border=1>
+	      <!-- 1. 방식-->
+		<tr>
+			<%
+			for (int i = 1; i <= 10; i++) {%>
+			<td> <%=i%> </td>
+			<%}
+			%>
+		</tr>
+		   <!-- 2.방식  -->
+		<tr>
+			<%
+			// PrintWriter out = response.getWriter();
+			// out은 jsp의 내장객체로 따로 선언하지 않아도 
+			// 호출해서 사용가능
+			for (int i = 1; i <= 10; i++) {
+			out.print("<td>" + i + "</td>");
+			}
+			%>
+		</tr>
+	</table>
+
+</body>
+</html>

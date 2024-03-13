@@ -26,7 +26,7 @@ public class ex02_DATASAND extends HttpServlet {
 		// 데이터 가져오기!
 		// 요청으로부터 데이터를 가져온다
 		// getParameter() 반환값이 스트링
-		// 저장 후 html코드를 실행하는게 순서
+		// 화면 실행을 하려면 자바파일탭를 저장 후 html 파일탭를 실행하는게 순서
 		
 		String result =request.getParameter("data");
 		
@@ -34,10 +34,10 @@ public class ex02_DATASAND extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.print(result);
 		
-		//System.out.println("data:"+result);
+		System.out.println("data:"+result);
 		
-		// html화면자체가 클라이의 요청
-		// 서버는 서블릿자바코드--> 클라이에게 넘겨준다
+		// html 폼 태그의 submit 누르는 행위가 클라이의 요청
+		// 서버는 서블릿자바코드--> 다시 새로운 페이지로 클라이에게 응답한다
 		// 맨처음 html을 통해 입력 --> 임이의 데이터라는 네임을 지정 
 		// -> 액션을 통해 서블릿으로 간다 같은 이름의 url 맵핑을 찾는다
 		// 위에서 아래로 코드 진행

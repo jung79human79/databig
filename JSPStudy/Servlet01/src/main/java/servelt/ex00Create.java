@@ -18,6 +18,7 @@ public class ex00Create extends HttpServlet {
        
 	// 기본 생성자 메소드
 	// 초기화 작업을 진핼할 수 있는 메소드!
+	// 클래스를 호출하면 즉 객체를 생성하면 자동으로 가져오는 메소드
     public ex00Create() {
     	
         super();
@@ -43,22 +44,23 @@ public class ex00Create extends HttpServlet {
 	// HttpServletResponse response = HttpServletResponse는 response 매개변수의 데이터 타입인데 타입은 객체형
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		System.out.println("service 매서드호출");
-	
-		//서비스를 제공하는 형태!
-		// 함수호출(매개변수)
+		//서비스를 제공하는 형태! --> 2가지
+		// 2가지 함수을 호출(매개변수)
+		// 원래는 2개 중 1개만 호출한다
 		doGet(request ,response);
 		doPost(request ,response);
 	}
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.getWriter().append("Served at: ").append(request.getContextPath()).append("wjdeown");
 		System.out.println("doGet 응답");
+		//doPost(request ,response);
 	}
 
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//doGet(request, response);
+		doGet(request, response);
 		System.out.println("doPost 응답");
 	}
 

@@ -1,0 +1,5 @@
+INDEX VERSION 1.134
+C:\Users\wjd1e\OneDrive\πŸ≈¡ »≠∏È\JSPStudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\875471413.index
+\jsp01\src\main\java
+C:\Users\wjd1e\OneDrive\πŸ≈¡ »≠∏È\JSPStudy\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\2129963516.index
+\MavenSample02\src\main\java
