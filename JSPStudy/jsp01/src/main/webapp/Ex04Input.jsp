@@ -36,7 +36,7 @@
 
 
 <!-- 4. 결과에 대한 출력화면 만들기 -->
-	<%=result1 %><%=result3 %><%=result2 %>=<%=rer %> <br>
+	<%=result1 %><%=result3 %><%=result2 %> = <%=rer %> <br>
 	
 	<%=result1  + result3 +   result2  + "=" + rer %>
 

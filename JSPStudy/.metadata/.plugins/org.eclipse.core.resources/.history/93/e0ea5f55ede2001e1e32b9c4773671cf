@@ -1,0 +1,34 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+
+<h1>쿠키확인페이지</h1>
+
+<%
+// 쿠키생성은 자바코드이고 생성된 것을 가져오는 코드도 자바코드
+// Ex01CreateCookie에서 링크 터치가 곧 요청이 들어온 것임
+//getCookies 배열로 반환 --> Cookie라는 객채로 리턴하되 배열이다
+	Cookie[] result = request.getCookies();
+
+// 반복문
+for (int i = 0; i < result.length; i++) {
+	// jsp에서는 내장함수를 이용해서 html페이지에 표현할수있다 // 물론 태그를 포함해서 표현가능
+	out.print(result[i].getName() + " / " + result[i].getValue() + "<br>");
+
+}
+%>
+
+<a href="Ex01RemoveCookie.jsp">쿠키삭제하기</a><br><br>
+<a href="Ex01CreateCookie.jsp">쿠키수정및추가하기</a>
+
+
+
+</body>
+</html>
